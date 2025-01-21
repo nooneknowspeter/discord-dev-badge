@@ -28,16 +28,18 @@ If not, get Docker [here](https://docs.docker.com/get-started/get-docker/)
 You can get Docker Desktop or the Docker Engine
 
 For Windows users,
-
 Docker Desktop is the simplest but clunky
 
 [Taking the other route will not allow you to run Linux containers](https://docs.docker.com/engine/install/binaries/#install-server-and-client-binaries-on-windows)
-
-If you don't want to install Docker Desktop and comfortable with a command line interface (CLI)
+If you don't want to install Docker Desktop and you're comfortable with a command line interface (CLI)
 
 You can use a [WSL Distro](https://learn.microsoft.com/en-us/windows/wsl/), then install the [Docker engine](https://docs.docker.com/engine/install/) on that distro
 
 You don't need Docker Desktop to run Docker on a Linux subsystem
+
+I highly recommend the [Lazydocker](https://github.com/jesseduffield/lazydocker) Docker client
+
+You can monitor and use certain Docker functions using a terminal user interface (TUI)
 
 ### Pulling the Image
 
@@ -45,7 +47,7 @@ In your terminal run
 
 `docker pull peter6/discord`
 
-This will pull the docker image from docker hub
+This will pull the Docker image from Docker hub
 
 When done downloading, list the images to ensure it's there
 
@@ -55,9 +57,16 @@ When done downloading, list the images to ensure it's there
 
 Run the image using
 
-`docker run -it peter6/discord:dev-badge`
+`docker run -it --name discord-dev-badge peter6/discord:dev-badge`
 
-This create a container from that image
+`-it` Interactive mode with tty (terminal)
+This allows you to interact with the newly created container (discord-dev-badge) created from the image (peter6/discord:dev-badge)
+
+`--name discord-dev-badge` Name the newly created container instance to "discord-dev-badge"
+
+`peter6/discord:dev-badge` The docker image containing the environment; Ubuntu binaries, repository, Node.js, npm packages
+
+This creates a container from that image
 
 You will then have a running interactive bash shell
 
@@ -181,6 +190,18 @@ If the bot's commands do not show up, ensure there are no errors when using the 
 If there is a 400 status code you need to give the bot permissions in your developer portal or you put in the wrong tokens/keys
 
 You can try again by using ^c, Ctrl + c, or Cmd + c and entering `npm run deploy-commands && npm run bot` or run the script again using `./setup.sh`
+
+Also, if you would like to add additional commands, you can do so in ./src/commands
+
+You can follow the [Discord.js guide](https://discordjs.guide/#before-you-begin) and [Discord.js api](https://discord.js.org/)
+
+Make sure to have a terminal instance running the bot `npm run bot`
+
+Make anther terminal instance (multiplex) by pane or by tabs in your preffered terminal emulator
+
+Run the `npm run deploy commands` in that terminal instance
+
+To run another shell with the same Docker container, use `docker exec -it discord-dev-badge /bin/bash`
 
 ## Finally
 
