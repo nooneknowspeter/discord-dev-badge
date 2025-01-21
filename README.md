@@ -1,4 +1,4 @@
-# Discord Developer Badge
+# Discord Developer Badge / Bot Starter Repo
 
 <div align="center">
 
@@ -77,9 +77,23 @@ chmod +x ./setup.sh
 ./setup.sh
 ```
 
+### Notice
+
 If you want to do the setup manually, follow [here](<README#Manual Setup>)
 
 The packages are pre-installed in the image when pulled but you can do it again if you like
+
+#### OPTIONAL: Making Your Own Image and Deploy Custom Bot
+
+Also, if you would like to build your own docker image and change some source code
+
+Clone the repository on your local machine / development machine
+
+Follow [this method for cloning and setting up your environment](README#Git)
+
+You will also need the buildx Docker plugin for building the image
+
+If you want to learn more on Docker, I recommend [Typecraft's Docker series](https://www.youtube.com/watch?v=WKI7d2zZv9U&list=PLsz00TDipIfcc6X5TECsuk0YNGWIx5HMl)
 
 ## Local Development Environment
 
@@ -179,7 +193,21 @@ Valid
 
 Run the bot using `npm run bot && npm run deploy-commands`
 
-## Notes
+#### Quick Note
+
+If you would like to create a custom bot and deploy with custome commands
+
+You can add those commands in ./src/commands/
+
+Play around in the package.json to change the name of the bot
+
+You can play around with the source files and code and suit it to your liking
+
+This repo is also a Discord bot starter project; hosting and deploying a container on a server
+
+You can pick infrastructure providers like DigitalOcean, AWS, Azure, ...
+
+## Notice
 
 Ensure the bot is running using `npm run deploy-commands && npm run bot`
 
