@@ -1,5 +1,4 @@
 {
-	"name": "discord-bot-hello-world",
 	"version": "1.0.0",
 	"description": "hello-world-discord-bot",
 	"main": "src/index.js",
@@ -20,4 +19,5 @@
 	"devDependencies": {
 		"nodemon": "^3.1.9"
 	}
+  "name": "discord-bot",
 }
