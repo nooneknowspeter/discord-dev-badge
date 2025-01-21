@@ -1,23 +1,23 @@
 {
-  "name": "discord-bot-hello-world",
-  "version": "1.0.0",
-  "description": "hello-world-discord-bot",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bot": "nodemon src/index.js",
-    "deploy-commands": "node --watch src/deploy-commands.js"
-  },
-  "author": "nooneknows",
-  "license": "ISC",
-  "dependencies": {
-    "@eslint/js": "^9.18.0",
-    "discord.js": "^14.17.3",
-    "dotenv": "^16.4.7",
-    "eslint": "^9.18.0",
-    "prettier": "^3.4.2"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.9"
-  }
+	"name": "discord-bot-hello-world",
+	"version": "1.0.0",
+	"description": "hello-world-discord-bot",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"bot": "nodemon src/index.js",
+		"deploy-commands": "node src/deploy-commands.js"
+	},
+	"author": "nooneknows",
+	"license": "ISC",
+	"dependencies": {
+		"@eslint/js": "^9.18.0",
+		"discord.js": "^14.17.3",
+		"dotenv": "^16.4.7",
+		"eslint": "^9.18.0",
+		"prettier": "^3.4.2"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.9"
+	}
 }
