@@ -9,7 +9,7 @@ module.exports = {
     // interaction.user is the object representing the User who ran the command
     // interaction.member is the GuildMember object, which represents the user in the specific guild
     const randomNumberGen = () => {
-      // generates a random number from 0 - 100
+      // generates a random number from 1 - 100
       const randomNumber = (Math.random() * 99) + 1
 
       const roundedRandomNumber = Math.round(randomNumber)
