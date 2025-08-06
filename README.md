@@ -45,7 +45,7 @@ You can monitor and use certain Docker functions using a terminal user interface
 
 In your terminal run
 
-`docker pull peter6/discord`
+`docker pull peter6/discord:dev-badge/`
 
 This will pull the Docker image from Docker hub
 
